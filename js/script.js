@@ -20,13 +20,14 @@ let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
     
     const squareContent = i;
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
-    currentSquare.classList.add('clicked')
-    currentSquare.classList.add('bomba');
+    
     
 
     currentSquare.addEventListener('click', function(){
         currentSquare.classList.add('clicked');
-        currentSquare.classList.toggle('bomba');
+        if(numeriUnici.includes(i)){
+            currentSquare.classList.add('bomba')
+        }
         console.log(squareContent);
     });
 
@@ -52,13 +53,13 @@ buttonElement.addEventListener('click' , function(){
     const squareContent = i;
    
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
-    currentSquare.classList.add('clicked')
-    currentSquare.classList.add('bomba');
-    
+   
 
     currentSquare.addEventListener('click', function(){
         currentSquare.classList.add('clicked');
-        currentSquare.classList.toggle('bomba');
+        if(numeriUnici.includes(i)){
+            currentSquare.classList.add('bomba')
+        }
         console.log(squareContent)
         
     });
