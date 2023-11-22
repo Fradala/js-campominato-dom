@@ -6,7 +6,7 @@ function getNewSquare (){
 }
 
 let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
-console.log(numeriUnici);
+    console.log(numeriUnici);
 
 
 const mainContentEl = document.querySelector('main section.main-content');
@@ -27,10 +27,7 @@ const mainContentEl = document.querySelector('main section.main-content');
     currentSquare.addEventListener('click', function(){
         currentSquare.classList.toggle('clicked');
         currentSquare.classList.add('bomba');
-        console.log(squareContent)
-        if (numeriUnici.push){
-            
-        }
+        console.log(squareContent);
     });
 
     mainContentEl.appendChild(currentSquare);
@@ -43,6 +40,8 @@ const buttonElement = document.querySelector('button');
 
 buttonElement.addEventListener('click' , function(){
     const mainContentEl = document.querySelector('main section.main-content');
+    let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
+        console.log(numeriUnici);
 
     const reset = document.querySelector("section.main-content");
     reset.innerHTML = "";
@@ -61,6 +60,9 @@ buttonElement.addEventListener('click' , function(){
         currentSquare.classList.toggle('clicked');
         currentSquare.classList.add('bomba');
         console.log(squareContent)
+        if ( currentSquare.click){
+
+        }
     });
 
     mainContentEl.appendChild(currentSquare);
