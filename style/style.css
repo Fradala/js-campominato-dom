@@ -22,6 +22,9 @@ main{
     display: flex;
     align-items: center;
 }
+.contenitore{
+    margin: 0 auto;
+}
 
 section.main-content{
     width: 500px;
@@ -52,6 +55,11 @@ section.main-content article.items-square.clicked .bomba{
     background-color: red;
 }
 
+.testo{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 55px;
+}
 
 p{
     margin-top: 30px;

@@ -6,7 +6,7 @@ function getNewSquare (){
 }
 
 let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
-    console.log(numeriUnici);
+        console.log(numeriUnici);
 
 
 const mainContentEl = document.querySelector('main section.main-content');
