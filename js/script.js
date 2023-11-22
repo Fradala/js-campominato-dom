@@ -9,8 +9,10 @@ let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
         console.log(numeriUnici);
 
 
-/*const mainContentEl = document.querySelector('main section.main-content');
+const mainContentEl = document.querySelector('main section.main-content');
+mainContentEl.classList.remove('not-clikable');
 
+let punteggio = 0
     const reset = document.querySelector("section.main-content");
     reset.innerHTML = "";
     
@@ -23,17 +25,24 @@ let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
     
     
 
-    currentSquare.addEventListener('click', function(){
+    currentSquare.addEventListener('click', function clickHandler (){
         currentSquare.classList.add('clicked');
-        if(numeriUnici.includes(i)){
+        if(numeriUnici.includes(squareContent)){
             currentSquare.classList.add('bomba')
+        
+            mainContentEl.classList.add('not-clikable')
+            punteggio++;
+            document.getElementById('testo').innerHTML += punteggio++;
+        } else {
+            punteggio++;
+            console.log(punteggio)
         }
-        console.log(squareContent);
+        console.log(squareContent)
+        
     });
-
     mainContentEl.appendChild(currentSquare);
     
-}*/
+}
 
 
 const buttonElement = document.querySelector('button');
@@ -43,7 +52,9 @@ buttonElement.addEventListener('click' , function(){
     const mainContentEl = document.querySelector('main section.main-content');
     let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
         console.log(numeriUnici);
+    mainContentEl.classList.remove('not-clikable');
 
+    let punteggio = 0
     const reset = document.querySelector("section.main-content");
     reset.innerHTML = "";
     
@@ -59,8 +70,12 @@ buttonElement.addEventListener('click' , function(){
         if(numeriUnici.includes(squareContent)){
             currentSquare.classList.add('bomba')
         
-            currentSquare.removeEventListener('click', clickHandler);
-        
+            mainContentEl.classList.add('not-clikable')
+            punteggio++;
+            document.getElementById('testo').innerHTML += punteggio++;
+        } else {
+            punteggio++;
+            console.log(punteggio)
         }
         console.log(squareContent)
         

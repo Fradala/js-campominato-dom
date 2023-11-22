@@ -25,6 +25,9 @@ main{
 .contenitore{
     margin: 0 auto;
 }
+.main-content.not-clikable{
+    pointer-events: none;
+}
 
 section.main-content{
     width: 500px;
@@ -55,7 +58,7 @@ article.items-square.clicked.bomba{
     background-color: red;
 }
 
-.testo{
+#testo{
     text-align: center;
     font-size: 2rem;
     padding-top: 36px;
