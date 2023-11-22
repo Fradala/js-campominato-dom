@@ -17,7 +17,7 @@ button{
 
 main{
     background-color: aqua;
-    height: 700px;
+    height: 650px;
     color: black;
     display: flex;
     align-items: center;
@@ -58,9 +58,9 @@ section.main-content article.items-square.clicked .bomba{
 .testo{
     text-align: center;
     font-size: 2rem;
-    margin-top: 55px;
+    padding-top: 36px;
 }
 
-p{
-    margin-top: 30px;
+.testo-footer{
+    margin-top: 45px;
 }
