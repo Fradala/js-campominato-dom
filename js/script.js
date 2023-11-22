@@ -21,11 +21,16 @@ const mainContentEl = document.querySelector('main section.main-content');
     const squareContent = i;
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
     currentSquare.classList.toggle('clicked')
+    currentSquare.classList.add('bomba');
     
 
     currentSquare.addEventListener('click', function(){
         currentSquare.classList.toggle('clicked');
+        currentSquare.classList.add('bomba');
         console.log(squareContent)
+        if (numeriUnici.push){
+            
+        }
     });
 
     mainContentEl.appendChild(currentSquare);
@@ -49,10 +54,12 @@ buttonElement.addEventListener('click' , function(){
     const squareContent = i;
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
     currentSquare.classList.add('clicked')
+    currentSquare.classList.add('bomba');
     
 
     currentSquare.addEventListener('click', function(){
         currentSquare.classList.toggle('clicked');
+        currentSquare.classList.add('bomba');
         console.log(squareContent)
     });
 

@@ -48,7 +48,9 @@ section.main-content article.items-square{
 section.main-content article.items-square.clicked{
     background-color: aqua;
 }
-
+section.main-content article.items-square.clicked .bomba{
+    background-color: red;
+}
 
 
 p{
