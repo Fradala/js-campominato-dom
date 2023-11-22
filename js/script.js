@@ -9,7 +9,7 @@ let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
         console.log(numeriUnici);
 
 
-const mainContentEl = document.querySelector('main section.main-content');
+/*const mainContentEl = document.querySelector('main section.main-content');
 
     const reset = document.querySelector("section.main-content");
     reset.innerHTML = "";
@@ -19,12 +19,9 @@ const mainContentEl = document.querySelector('main section.main-content');
     const currentSquare = getNewSquare();
     
     const squareContent = i;
-    if(numeriUnici.includes(i)){
-        currentSquare.classList.add('bomba')
-    }
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
     currentSquare.classList.add('clicked')
-    currentSquare.classList.toggle('bomba');
+    currentSquare.classList.add('bomba');
     
 
     currentSquare.addEventListener('click', function(){
@@ -35,7 +32,7 @@ const mainContentEl = document.querySelector('main section.main-content');
 
     mainContentEl.appendChild(currentSquare);
     
-}
+}*/
 
 
 const buttonElement = document.querySelector('button');
@@ -52,14 +49,11 @@ buttonElement.addEventListener('click' , function(){
 
     for (let i = 1; i <= 100; i ++){
     const currentSquare = getNewSquare();
-   
     const squareContent = i;
-    if(numeriUnici.includes(i)){
-        currentSquare.classList.add('bomba')
-    }
+   
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
     currentSquare.classList.add('clicked')
-    currentSquare.classList.toggle('bomba');
+    currentSquare.classList.add('bomba');
     
 
     currentSquare.addEventListener('click', function(){

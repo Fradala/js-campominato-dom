@@ -35,7 +35,7 @@ section.main-content{
    
 }
 
-.items-square{
+article.items-square{
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
@@ -48,11 +48,11 @@ section.main-content{
     
 }
 
-.clicked{
+article.items-square.clicked{
     background-color: aqua;
 }
-.bomba{
-    background-color: rgb(34, 255, 0);
+article.items-square.clicked.bomba{
+    background-color: red;
 }
 
 .testo{
