@@ -17,16 +17,19 @@ const mainContentEl = document.querySelector('main section.main-content');
 
     for (let i = 1; i <= 100; i ++){
     const currentSquare = getNewSquare();
-    numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
+    
     const squareContent = i;
+    if(numeriUnici.includes(i)){
+        currentSquare.classList.add('bomba')
+    }
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
-    currentSquare.classList.toggle('clicked')
-    currentSquare.classList.add('bomba');
+    currentSquare.classList.add('clicked')
+    currentSquare.classList.toggle('bomba');
     
 
     currentSquare.addEventListener('click', function(){
-        currentSquare.classList.toggle('clicked');
-        currentSquare.classList.add('bomba');
+        currentSquare.classList.add('clicked');
+        currentSquare.classList.toggle('bomba');
         console.log(squareContent);
     });
 
@@ -49,20 +52,21 @@ buttonElement.addEventListener('click' , function(){
 
     for (let i = 1; i <= 100; i ++){
     const currentSquare = getNewSquare();
-    numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
+   
     const squareContent = i;
+    if(numeriUnici.includes(i)){
+        currentSquare.classList.add('bomba')
+    }
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
     currentSquare.classList.add('clicked')
-    currentSquare.classList.add('bomba');
+    currentSquare.classList.toggle('bomba');
     
 
     currentSquare.addEventListener('click', function(){
-        currentSquare.classList.toggle('clicked');
-        currentSquare.classList.add('bomba');
+        currentSquare.classList.add('clicked');
+        currentSquare.classList.toggle('bomba');
         console.log(squareContent)
-        if ( currentSquare.click){
-
-        }
+        
     });
 
     mainContentEl.appendChild(currentSquare);
