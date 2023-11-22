@@ -5,6 +5,10 @@ function getNewSquare (){
     return newSquareElement
 }
 
+let numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
+console.log(numeriUnici);
+
+
 const mainContentEl = document.querySelector('main section.main-content');
 
     const reset = document.querySelector("section.main-content");
@@ -13,6 +17,7 @@ const mainContentEl = document.querySelector('main section.main-content');
 
     for (let i = 1; i <= 100; i ++){
     const currentSquare = getNewSquare();
+    numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
     const squareContent = i;
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
     currentSquare.classList.toggle('clicked')
@@ -40,6 +45,7 @@ buttonElement.addEventListener('click' , function(){
 
     for (let i = 1; i <= 100; i ++){
     const currentSquare = getNewSquare();
+    numeriUnici = generaNumeriCasualiUnici(1, 100, 10);
     const squareContent = i;
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
     currentSquare.classList.add('clicked')
@@ -58,7 +64,28 @@ buttonElement.addEventListener('click' , function(){
 
 })
 
-
+// Funzione per generare numeri casuali
 function getRandomNumber (minNumber, maxNumber){
     return Math.floor(Math.random()*(maxNumber - minNumber + 1) + minNumber)
 }
+
+// Funzione per generare numeri casuali unici in un range specificato
+
+function generaNumeriCasualiUnici(min, max, quantita) {
+    if (max - min + 1 < quantita) {
+        console.error("Impossibile generare numeri unici");
+        return [];
+    }
+
+    let numeriCasuali = [];
+    while (numeriCasuali.length < quantita) {
+        let numeroCasuale = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (!numeriCasuali.includes(numeroCasuale)) {
+            numeriCasuali.push(numeroCasuale);
+        }
+    }
+
+    return numeriCasuali;
+}
+
+
