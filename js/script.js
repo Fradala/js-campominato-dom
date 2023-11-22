@@ -71,15 +71,15 @@ function getRandomNumber (minNumber, maxNumber){
 
 // Funzione per generare numeri casuali unici in un range specificato
 
-function generaNumeriCasualiUnici(min, max, quantita) {
-    if (max - min + 1 < quantita) {
+function generaNumeriCasualiUnici(minNumber, maxNumber, quantita) {
+    if (maxNumber - minNumber + 1 < quantita) {
         console.error("Impossibile generare numeri unici");
         return [];
     }
 
     let numeriCasuali = [];
     while (numeriCasuali.length < quantita) {
-        let numeroCasuale = Math.floor(Math.random() * (max - min + 1)) + min;
+        let numeroCasuale = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
         if (!numeriCasuali.includes(numeroCasuale)) {
             numeriCasuali.push(numeroCasuale);
         }
