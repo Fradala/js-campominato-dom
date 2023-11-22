@@ -53,12 +53,14 @@ buttonElement.addEventListener('click' , function(){
     const squareContent = i;
    
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
-   
 
-    currentSquare.addEventListener('click', function(){
+    currentSquare.addEventListener('click', function clickHandler (){
         currentSquare.classList.add('clicked');
-        if(numeriUnici.includes(i)){
+        if(numeriUnici.includes(squareContent)){
             currentSquare.classList.add('bomba')
+        
+            currentSquare.removeEventListener('click', clickHandler);
+        
         }
         console.log(squareContent)
         

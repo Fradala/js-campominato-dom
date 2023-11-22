@@ -49,7 +49,7 @@ article.items-square{
 }
 
 article.items-square.clicked{
-    background-color: aqua;
+    background-color: rgb(0, 0, 255);
 }
 article.items-square.clicked.bomba{
     background-color: red;
